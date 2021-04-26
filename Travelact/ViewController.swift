@@ -11,8 +11,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var bgPlane: UIView!
     @IBOutlet weak var bgImage: UIImageView!
-    @IBOutlet weak var startButton: UIButton!
     @IBOutlet weak var inputName: UITextField!
+    
+    
+    @IBAction func startButton(_ sender: Any) {
+        performSegue(withIdentifier: "twoScreen", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         bgImage.image = UIImage(named: "Beach")

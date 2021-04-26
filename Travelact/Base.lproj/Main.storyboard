@@ -24,20 +24,46 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-Jq-mML">
                                 <rect key="frame" x="0.0" y="539" width="414" height="357"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfL-4z-coX">
-                                        <rect key="frame" x="184" y="164" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-gO-D3V">
-                                        <rect key="frame" x="159" y="60" width="97" height="34"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-gO-D3V">
+                                        <rect key="frame" x="114" y="87" width="186" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your name here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcG-Ly-6tA">
+                                        <rect key="frame" x="126" y="41" width="163" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfL-4z-coX">
+                                        <rect key="frame" x="49" y="153" width="317" height="51"/>
+                                        <color key="backgroundColor" red="0.27104341980000002" green="0.51856112480000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iJf-mz-YWF"/>
+                                            <segue destination="wVQ-er-54Q" kind="custom" identifier="twoScreen" id="GgM-pL-xcM"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="GfL-4z-coX" firstAttribute="leading" secondItem="Ay2-Jq-mML" secondAttribute="leading" constant="49" id="1km-5S-lCq"/>
+                                    <constraint firstItem="HNM-gO-D3V" firstAttribute="leading" secondItem="Ay2-Jq-mML" secondAttribute="leading" constant="114" id="GlG-ul-dhZ"/>
+                                    <constraint firstAttribute="trailing" secondItem="GfL-4z-coX" secondAttribute="trailing" constant="48" id="IQK-nz-ObC"/>
+                                    <constraint firstAttribute="bottom" secondItem="GfL-4z-coX" secondAttribute="bottom" constant="153" id="ZUH-3C-lQx"/>
+                                    <constraint firstItem="HNM-gO-D3V" firstAttribute="top" secondItem="gcG-Ly-6tA" secondAttribute="bottom" constant="25" id="bI1-1B-pQd"/>
+                                    <constraint firstAttribute="trailing" secondItem="gcG-Ly-6tA" secondAttribute="trailing" constant="125" id="eIB-m3-cDp"/>
+                                    <constraint firstItem="gcG-Ly-6tA" firstAttribute="leading" secondItem="Ay2-Jq-mML" secondAttribute="leading" constant="126" id="nrK-SE-OAT"/>
+                                    <constraint firstAttribute="trailing" secondItem="HNM-gO-D3V" secondAttribute="trailing" constant="114" id="p4g-gA-6rz"/>
+                                    <constraint firstItem="gcG-Ly-6tA" firstAttribute="top" secondItem="Ay2-Jq-mML" secondAttribute="top" constant="41" id="xJb-5d-DKK"/>
+                                </constraints>
                             </view>
+                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mEf-bm-yQm">
+                                <rect key="frame" x="146" y="503" width="123" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </pageControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -52,7 +78,6 @@
                         <outlet property="bgImage" destination="Wzf-6O-Oio" id="Mzb-WZ-Nx0"/>
                         <outlet property="bgPlane" destination="Ay2-Jq-mML" id="gKs-K6-OwC"/>
                         <outlet property="inputName" destination="HNM-gO-D3V" id="mkG-RX-ywT"/>
-                        <outlet property="startButton" destination="GfL-4z-coX" id="rcJ-9e-7ey"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
