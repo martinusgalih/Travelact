@@ -17,13 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wzf-6O-Oio">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="569"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wzf-6O-Oio">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="602"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-Jq-mML">
-                                <rect key="frame" x="0.0" y="538" width="414" height="358"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ay2-Jq-mML">
+                                <rect key="frame" x="0.0" y="539" width="414" height="357"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GfL-4z-coX">
                                         <rect key="frame" x="184" y="164" width="46" height="30"/>
@@ -36,18 +35,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-pp-ULM">
-                                        <rect key="frame" x="186" y="219" width="46" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ay2-Jq-mML" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="495" id="2U4-o3-QtN"/>
+                            <constraint firstItem="Ay2-Jq-mML" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DjQ-VX-8cB"/>
+                            <constraint firstItem="Ay2-Jq-mML" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EHe-QC-q1q"/>
+                            <constraint firstAttribute="bottom" secondItem="Ay2-Jq-mML" secondAttribute="bottom" id="nXl-Lt-Oei"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bgImage" destination="Wzf-6O-Oio" id="Mzb-WZ-Nx0"/>
+                        <outlet property="bgPlane" destination="Ay2-Jq-mML" id="gKs-K6-OwC"/>
+                        <outlet property="inputName" destination="HNM-gO-D3V" id="mkG-RX-ywT"/>
+                        <outlet property="startButton" destination="GfL-4z-coX" id="rcJ-9e-7ey"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -117,6 +123,7 @@
                         <viewLayoutGuide key="safeArea" id="wzU-h9-mhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="VlM-dd-5YN"/>
                     <connections>
                         <outlet property="answer1Button" destination="gH7-uC-3Bg" id="L5u-oU-s1Z"/>
                         <outlet property="answer2Button" destination="Gqu-8H-3jB" id="J0u-fK-Jhc"/>

@@ -9,9 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var bgPlane: UIView!
+    @IBOutlet weak var bgImage: UIImageView!
+    @IBOutlet weak var startButton: UIButton!
+    @IBOutlet weak var inputName: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        bgImage.image = UIImage(named: "Beach")
+        bgPlane.layer.cornerRadius = 50
+        
     }
 
 
