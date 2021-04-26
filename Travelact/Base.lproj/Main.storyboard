@@ -36,6 +36,11 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Li0-pp-ULM">
+                                        <rect key="frame" x="186" y="219" width="46" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
