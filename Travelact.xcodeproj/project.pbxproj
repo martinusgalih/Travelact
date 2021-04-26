@@ -16,6 +16,7 @@
 		90AB6F1D263670C100015D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90AB6F1B263670C100015D35 /* LaunchScreen.storyboard */; };
 		90AB6F28263670C200015D35 /* TravelactTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F27263670C200015D35 /* TravelactTests.swift */; };
 		90AB6F33263670C200015D35 /* TravelactUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F32263670C200015D35 /* TravelactUITests.swift */; };
+		F94E872326367E7400F11043 /* ConversationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F94E872226367E7400F11043 /* ConversationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		90AB6F2E263670C200015D35 /* TravelactUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TravelactUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AB6F32263670C200015D35 /* TravelactUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelactUITests.swift; sourceTree = "<group>"; };
 		90AB6F34263670C200015D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F94E872226367E7400F11043 /* ConversationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				90AB6F0F263670C100015D35 /* SceneDelegate.swift */,
 				90AB6F11263670C100015D35 /* ViewController.swift */,
 				90AB6F13263670C100015D35 /* Main.storyboard */,
+				F94E872226367E7400F11043 /* ConversationViewController.swift */,
 				90AB6F19263670C100015D35 /* Assets.xcassets */,
 				90AB6F1B263670C100015D35 /* LaunchScreen.storyboard */,
 				90AB6F1E263670C100015D35 /* Info.plist */,
@@ -263,6 +266,7 @@
 			files = (
 				90AB6F18263670C100015D35 /* Travelact.xcdatamodeld in Sources */,
 				90AB6F12263670C100015D35 /* ViewController.swift in Sources */,
+				F94E872326367E7400F11043 /* ConversationViewController.swift in Sources */,
 				90AB6F0E263670C100015D35 /* AppDelegate.swift in Sources */,
 				90AB6F10263670C100015D35 /* SceneDelegate.swift in Sources */,
 			);
