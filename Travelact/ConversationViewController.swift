@@ -29,9 +29,9 @@ class ConversationViewController: UIViewController {
     
     func buttonUI(){
         replySelection.layer.cornerRadius = 15
-        answer1Button.layer.cornerRadius = 10
-        answer2Button.layer.cornerRadius = 10
-        answer3Button.layer.cornerRadius = 10
+        answer1Button.layer.cornerRadius = 27.5
+        answer2Button.layer.cornerRadius = 27.5
+        answer3Button.layer.cornerRadius = 27.5
     }
 }
 
