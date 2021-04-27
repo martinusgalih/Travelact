@@ -167,23 +167,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-FM-zWT">
-                                <rect key="frame" x="0.0" y="0.0" width="426" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-FM-zWT">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-k5-11O">
-                                <rect key="frame" x="209" y="343" width="205" height="553"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6AS-k5-11O">
+                                <rect key="frame" x="209" y="346" width="205" height="550"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="nXJ-t6-C7h"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="af9-De-8c5">
-                                <rect key="frame" x="0.0" y="343" width="210" height="553"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="af9-De-8c5">
+                                <rect key="frame" x="0.0" y="346" width="210" height="550"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="L7Y-MF-e6c"/>
+                                </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f75-rz-Qgr">
-                                <rect key="frame" x="0.0" y="556" width="414" height="340"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f75-rz-Qgr">
+                                <rect key="frame" x="0.0" y="582" width="414" height="314"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gqu-8H-3jB">
-                                        <rect key="frame" x="20" y="113" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="105" width="374" height="55"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="v88-zt-lvv"/>
@@ -194,7 +197,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7N-D8-WKk">
-                                        <rect key="frame" x="20" y="188" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="180" width="374" height="55"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="QoS-qc-tFa"/>
@@ -205,7 +208,7 @@
                                         </state>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gH7-uC-3Bg">
-                                        <rect key="frame" x="20" y="38" width="374" height="55"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="55"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="oEX-zQ-kR2"/>
@@ -225,8 +228,8 @@
                                     <constraint firstItem="Gqu-8H-3jB" firstAttribute="leading" secondItem="f75-rz-Qgr" secondAttribute="leading" constant="20" id="HOw-dm-5JL"/>
                                     <constraint firstItem="D7N-D8-WKk" firstAttribute="leading" secondItem="f75-rz-Qgr" secondAttribute="leading" constant="20" id="KRo-UM-aez"/>
                                     <constraint firstAttribute="trailing" secondItem="D7N-D8-WKk" secondAttribute="trailing" constant="20" id="L95-Om-2Z1"/>
-                                    <constraint firstAttribute="height" constant="340" id="N3e-k2-NJG"/>
-                                    <constraint firstItem="gH7-uC-3Bg" firstAttribute="top" secondItem="f75-rz-Qgr" secondAttribute="top" constant="38" id="O8q-vA-uca"/>
+                                    <constraint firstAttribute="height" constant="280" id="N3e-k2-NJG"/>
+                                    <constraint firstItem="gH7-uC-3Bg" firstAttribute="top" secondItem="f75-rz-Qgr" secondAttribute="top" constant="30" id="O8q-vA-uca"/>
                                     <constraint firstAttribute="trailing" secondItem="Gqu-8H-3jB" secondAttribute="trailing" constant="20" id="gJn-IL-zWy"/>
                                 </constraints>
                             </view>
@@ -237,17 +240,27 @@
                                     <constraint firstAttribute="height" constant="22" id="sOu-NJ-qKi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
-                                <state key="normal" title=" Exit" image="chevron.backward" catalog="system"/>
+                                <state key="normal" title=" Exit" image="chevron.backward" catalog="system">
+                                    <color key="titleColor" systemColor="systemBlueColor"/>
+                                </state>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzU-h9-mhV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="BCS-z8-mPa" firstAttribute="top" secondItem="wzU-h9-mhV" secondAttribute="top" id="0Tc-Lj-h8z"/>
+                            <constraint firstItem="6AS-k5-11O" firstAttribute="trailing" secondItem="wzU-h9-mhV" secondAttribute="trailing" id="1Bw-mA-FPa"/>
+                            <constraint firstItem="af9-De-8c5" firstAttribute="leading" secondItem="wzU-h9-mhV" secondAttribute="leading" id="1ey-aK-kTb"/>
+                            <constraint firstAttribute="bottom" secondItem="af9-De-8c5" secondAttribute="bottom" id="45y-jA-8D2"/>
                             <constraint firstItem="f75-rz-Qgr" firstAttribute="trailing" secondItem="wzU-h9-mhV" secondAttribute="trailing" id="60s-us-U5Q"/>
                             <constraint firstItem="BCS-z8-mPa" firstAttribute="leading" secondItem="wzU-h9-mhV" secondAttribute="leading" constant="20" id="GBS-EW-weD"/>
+                            <constraint firstAttribute="trailing" secondItem="Lqw-FM-zWT" secondAttribute="trailing" id="LLC-3Z-SPm"/>
+                            <constraint firstAttribute="bottom" secondItem="6AS-k5-11O" secondAttribute="bottom" id="MD8-6C-obK"/>
                             <constraint firstAttribute="bottom" secondItem="f75-rz-Qgr" secondAttribute="bottom" id="ZDx-bZ-gM0"/>
                             <constraint firstItem="f75-rz-Qgr" firstAttribute="leading" secondItem="wzU-h9-mhV" secondAttribute="leading" id="hcn-wV-WGE"/>
+                            <constraint firstItem="Lqw-FM-zWT" firstAttribute="leading" secondItem="wzU-h9-mhV" secondAttribute="leading" id="iYa-Hf-vPh"/>
+                            <constraint firstItem="Lqw-FM-zWT" firstAttribute="top" secondItem="6jx-4y-goC" secondAttribute="top" id="k3t-gm-bHZ"/>
+                            <constraint firstAttribute="bottom" secondItem="Lqw-FM-zWT" secondAttribute="bottom" id="wmH-g8-cNI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VlM-dd-5YN"/>
@@ -264,6 +277,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Beach" width="6326" height="3515"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="leftButton" width="266" height="200"/>
         <image name="rightButton" width="255" height="200"/>
@@ -278,6 +292,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
