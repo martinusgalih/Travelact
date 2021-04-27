@@ -15,6 +15,7 @@ class ConversationViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var replySelection: UIView!
+    @IBOutlet weak var textLabel: UILabel!
     
     
     override func viewDidLoad() {
@@ -22,16 +23,19 @@ class ConversationViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        buttonUI()
+        updateUI()
         //replySelection.isHidden = true
+        //textLabel.isHidden = true
     }
     
     
-    func buttonUI(){
+    func updateUI(){
         replySelection.layer.cornerRadius = 30
         answer1Button.layer.cornerRadius = 27.5
         answer2Button.layer.cornerRadius = 27.5
         answer3Button.layer.cornerRadius = 27.5
-    }
+        textLabel.layer.cornerRadius = 20
+        textLabel.layer.masksToBounds = true
 }
 
+}
