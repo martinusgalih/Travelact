@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90A189AE26372BC90096CB36 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A189AD26372BC90096CB36 /* Sound.swift */; };
+		90A189B726372D2A0096CB36 /* clickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90A189B626372D2A0096CB36 /* clickSound.mp3 */; };
 		90AB6F0E263670C100015D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F0D263670C100015D35 /* AppDelegate.swift */; };
 		90AB6F10263670C100015D35 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F0F263670C100015D35 /* SceneDelegate.swift */; };
 		90AB6F12263670C100015D35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F11263670C100015D35 /* ViewController.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90A189AD26372BC90096CB36 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		90A189B626372D2A0096CB36 /* clickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickSound.mp3; sourceTree = "<group>"; };
 		90AB6F0A263670C100015D35 /* Travelact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelact.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90AB6F0D263670C100015D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90AB6F0F263670C100015D35 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		90A189B526372D040096CB36 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				90A189B626372D2A0096CB36 /* clickSound.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		90AB6F01263670C000015D35 = {
 			isa = PBXGroup;
 			children = (
@@ -103,9 +115,11 @@
 		90AB6F0C263670C100015D35 /* Travelact */ = {
 			isa = PBXGroup;
 			children = (
+				90A189B526372D040096CB36 /* Sounds */,
 				90AB6F0D263670C100015D35 /* AppDelegate.swift */,
 				90AB6F0F263670C100015D35 /* SceneDelegate.swift */,
 				90AB6F11263670C100015D35 /* ViewController.swift */,
+				90A189AD26372BC90096CB36 /* Sound.swift */,
 				90AB6F13263670C100015D35 /* Main.storyboard */,
 				F94E872226367E7400F11043 /* ConversationViewController.swift */,
 				90AB6F19263670C100015D35 /* Assets.xcassets */,
@@ -240,6 +254,7 @@
 				90AB6F1D263670C100015D35 /* LaunchScreen.storyboard in Resources */,
 				90AB6F1A263670C100015D35 /* Assets.xcassets in Resources */,
 				90AB6F15263670C100015D35 /* Main.storyboard in Resources */,
+				90A189B726372D2A0096CB36 /* clickSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +284,7 @@
 				F94E872326367E7400F11043 /* ConversationViewController.swift in Sources */,
 				90AB6F0E263670C100015D35 /* AppDelegate.swift in Sources */,
 				90AB6F10263670C100015D35 /* SceneDelegate.swift in Sources */,
+				90A189AE26372BC90096CB36 /* Sound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

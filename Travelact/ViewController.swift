@@ -4,7 +4,7 @@
 //
 //  Created by Martinus Galih Widananto on 26/04/21.
 //
-
+import AVFoundation
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
@@ -17,21 +17,38 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locLabel: UILabel!
     
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollView: UIPageControl!
     @IBAction func startButton(_ sender: Any) {
         performSegue(withIdentifier: "twoScreen", sender: self)
         
+    }
+    
+    @IBAction func nextButton(_ sender: Any) {
+        if bgImage.image == UIImage(named: "Beach") {
+            titleLabel.text = "Coming Soon"
+            locLabel.text = "Coming Soon"
+            bgImage.image = UIImage(named: "comingsoon")
+            pageControl.currentPage = 2
+            self.clickSound()
+        }
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        if bgImage.image == UIImage(named: "comingsoon") {
+            titleLabel.text = "Hive Five Beach"
+            locLabel.text = "England"
+            bgImage.image = UIImage(named: "Beach")
+            pageControl.currentPage = 0
+            self.clickSound()
+        }
     }
     var destination: [String] = ["Beach","comingsoon","comingsoon"]
     var frame = CGRect.zero
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pageControl.numberOfPages = destination.count
-        setupScreens()
-        scrollView.delegate = self
+        pageControl.numberOfPages = 2
         UISetup()
-        animateView()
     }
 
     //tampilan
@@ -47,43 +64,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         inputName.layer.borderColor = UIColor.lightGray.cgColor
         
         bgPlane.layer.cornerRadius = 50
+        
+        bgImage.image = UIImage(named: "Beach")
+        locLabel.text = "England"
+        titleLabel.text = "Hive Five Beach"
     }
     
-    func setupScreens() {
-        for index in 0..<destination.count {
-            frame.origin.x = scrollView.frame.size.width * CGFloat(index)
-            frame.size = scrollView.frame.size
-            
-            let imgView = UIImageView(frame: frame)
-            imgView.image = UIImage(named: destination[index])
-            self.scrollView.addSubview(imgView)
-            
-        }
         
-        scrollView.contentSize = CGSize(width: (scrollView.frame.size.width * CGFloat(destination.count)), height: scrollView.frame.size.height)
-        scrollView.delegate = self
-        
-    }
-    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-        let pageNumber = scrollView.contentOffset.x / scrollView.frame.size.width
-        pageControl.currentPage = Int(pageNumber)
-    }
-    
-    func animateView() {
-        if (pageControl.subviews.count == 1) {
-            titleLabel.text = "Hive Beach Cafe"
-            locLabel.text = "England"
-            return
-        }
-        if (pageControl.subviews.count == 2) {
-            titleLabel.text = ""
-            locLabel.text = ""
-            titleLabel.text = "Coming Soon"
-            locLabel.text = "Coming Soon"
-            return
-            
-        }
-
-    }
 }
 
