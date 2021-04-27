@@ -40,7 +40,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AcK-dh-QxO"/>
+                                            <segue destination="wVQ-er-54Q" kind="presentation" identifier="twoScreen" modalPresentationStyle="fullScreen" id="hhQ-XO-dqe"/>
                                         </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type your name here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HNM-gO-D3V">
@@ -164,7 +164,7 @@
                         <outlet property="locLabel" destination="LQf-qG-pqc" id="5QQ-sF-ogw"/>
                         <outlet property="pageControl" destination="mEf-bm-yQm" id="nx8-fi-aze"/>
                         <outlet property="scrollView" destination="mEf-bm-yQm" id="7IU-ak-zfR"/>
-                        <outlet property="startButton1" destination="jDT-gQ-qhi" id="8LZ-OC-J7e"/>
+                        <outlet property="startButton1" destination="jDT-gQ-qhi" id="Uyt-yh-CkV"/>
                         <outlet property="titleLabel" destination="KWd-Cn-GBa" id="qH1-gI-TCq"/>
                     </connections>
                 </viewController>
@@ -180,7 +180,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TravelactBG" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-FM-zWT">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beach" translatesAutoresizingMaskIntoConstraints="NO" id="Lqw-FM-zWT">
                                 <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="af9-De-8c5">
@@ -268,6 +268,9 @@
                                 <state key="normal" title=" Exit" image="chevron.backward" catalog="system">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="exit:" destination="wVQ-er-54Q" eventType="touchUpInside" id="KUm-MX-QAx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wzU-h9-mhV"/>
@@ -296,7 +299,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="VlM-dd-5YN"/>
                     <connections>
-                        <outlet property="answer1Button" destination="gH7-uC-3Bg" id="L5u-oU-s1Z"/>
+                        <outlet property="answer1Button" destination="gH7-uC-3Bg" id="NG5-jc-xH4"/>
                         <outlet property="answer2Button" destination="Gqu-8H-3jB" id="J0u-fK-Jhc"/>
                         <outlet property="answer3Button" destination="D7N-D8-WKk" id="Na7-BW-NeT"/>
                         <outlet property="replySelection" destination="f75-rz-Qgr" id="66V-ki-LXz"/>
@@ -309,7 +312,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="TravelactBG" width="1080" height="1920"/>
+        <image name="Beach" width="1080" height="1920"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="leftButton" width="266" height="200"/>
         <image name="rightButton" width="255" height="200"/>

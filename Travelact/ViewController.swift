@@ -18,10 +18,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var locLabel: UILabel!
     
     @IBOutlet weak var scrollView: UIPageControl!
-    @IBAction func startButton(_ sender: Any) {
-        performSegue(withIdentifier: "twoScreen", sender: self)
-        
-    }
     
     @IBAction func nextButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "Beach") {
@@ -70,6 +66,5 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         titleLabel.text = "Hive Five Beach"
     }
     
-        
+    
 }
-

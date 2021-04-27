@@ -38,4 +38,8 @@ class ConversationViewController: UIViewController {
         textLabel.layer.masksToBounds = true
 }
 
+    @IBAction func exit(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
 }
