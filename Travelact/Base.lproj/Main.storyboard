@@ -101,7 +101,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRAVELACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OkB-Vn-XN5">
-                                <rect key="frame" x="97" y="66.333333333333329" width="196" height="40.666666666666671"/>
+                                <rect key="frame" x="97" y="66.666666666666671" width="196" height="40.333333333333329"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -117,7 +117,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Learn accent while traveling" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGK-xj-Jd3">
-                                <rect key="frame" x="97" y="109.33333333333333" width="196" height="16.666666666666671"/>
+                                <rect key="frame" x="97" y="109.33333333333333" width="196" height="17"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -259,7 +259,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCS-z8-mPa">
-                                <rect key="frame" x="20" y="61" width="47.666666666666657" height="22"/>
+                                <rect key="frame" x="19.999999999999996" y="61" width="47.666666666666657" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="sOu-NJ-qKi"/>
                                 </constraints>
