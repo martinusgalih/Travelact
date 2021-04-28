@@ -49,7 +49,10 @@ class ConversationViewController: UIViewController {
     
     
     //nanti nambah
-    var scene1:[Convos] = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is", "What's your name?", "Huh?"], correctRespons: 0), Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1)]
+    var scene1:[Convos] = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is", "What's your name?", "Huh?"], correctRespons: 0)]
+    var scene2:[Convos] = [Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1)]
+    
+    
     
     var currentScene: Convos?
     var currentScenePos = 0
@@ -83,6 +86,10 @@ class ConversationViewController: UIViewController {
             currentScenePos += 1
             currentScene = scene1[currentScenePos]
             setConvos()
+//        }else if currentScenePos + 1 < scene2.count{
+//            currentScenePos += 1
+//            currentScene = scene1[currentScenePos]
+//            setConvos()
         }
     }
     
@@ -99,10 +106,14 @@ class ConversationViewController: UIViewController {
         utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
         utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
         synthesizer.speak(utterance)
-        let second = 1.0
+        
+        
+        let second = 5.0
         DispatchQueue.main.asyncAfter(deadline: .now() + second){
             self.replySelection.isHidden = false
         }
+        
+        replySelection.isHidden = true
     }
     
     
