@@ -16,8 +16,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locLabel: UILabel!
-    
     @IBOutlet weak var scrollView: UIPageControl!
+    
     
     @IBAction func nextButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "Beach") {
@@ -25,6 +25,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             locLabel.text = "Coming Soon"
             bgImage.image = UIImage(named: "comingsoon")
             pageControl.currentPage = 2
+            self.clickSound()
+        } else if bgImage.image == UIImage(named: "comingsoon") {
+            titleLabel.text = "Hive Five Beach"
+            locLabel.text = "England"
+            bgImage.image = UIImage(named: "Beach")
+            pageControl.currentPage = 0
             self.clickSound()
         }
     }
@@ -35,6 +41,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             locLabel.text = "England"
             bgImage.image = UIImage(named: "Beach")
             pageControl.currentPage = 0
+            self.clickSound()
+        } else if bgImage.image == UIImage(named: "Beach") {
+            titleLabel.text = "Coming Soon"
+            locLabel.text = "Coming Soon"
+            bgImage.image = UIImage(named: "comingsoon")
+            pageControl.currentPage = 2
             self.clickSound()
         }
     }
