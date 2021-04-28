@@ -16,8 +16,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locLabel: UILabel!
-    @IBOutlet weak var scrollView: UIPageControl!
-   
     @IBAction func startButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
            

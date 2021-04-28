@@ -164,7 +164,6 @@
                         <outlet property="inputName" destination="HNM-gO-D3V" id="mkG-RX-ywT"/>
                         <outlet property="locLabel" destination="LQf-qG-pqc" id="5QQ-sF-ogw"/>
                         <outlet property="pageControl" destination="mEf-bm-yQm" id="nx8-fi-aze"/>
-                        <outlet property="scrollView" destination="mEf-bm-yQm" id="7IU-ak-zfR"/>
                         <outlet property="startButton1" destination="jDT-gQ-qhi" id="Uyt-yh-CkV"/>
                         <outlet property="titleLabel" destination="KWd-Cn-GBa" id="qH1-gI-TCq"/>
                     </connections>
