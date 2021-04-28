@@ -11,4 +11,5 @@ struct Convos {
     let text:String
     let respons:[String]
     let correctRespons:Int
+    let character:String
 }

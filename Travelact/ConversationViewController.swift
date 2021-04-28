@@ -49,8 +49,7 @@ class ConversationViewController: UIViewController {
     
     
     //nanti nambah
-    var scene1:[Convos] = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is", "What's your name?", "Huh?"], correctRespons: 0)]
-    var scene2:[Convos] = [Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1)]
+    var scene1:[Convos] = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1, character: "a"), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1, character: "a"), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is", "What's your name?", "Huh?"], correctRespons: 0, character: "a"), Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1, character: "c")]
     
     
     
@@ -102,10 +101,18 @@ class ConversationViewController: UIViewController {
         answer3Button.setTitle(currentScene!.respons[2], for: .normal)
         
     
-        let utterance = AVSpeechUtterance(string: currentScene!.text)
-        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
-        utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
-        synthesizer.speak(utterance)
+        if currentScene!.character == "a"{
+            let utterance = AVSpeechUtterance(string: currentScene!.text)
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Karen-compact")
+            utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+            synthesizer.speak(utterance)
+            
+        } else if currentScene!.character == "c"{
+            let utterance = AVSpeechUtterance(string: currentScene!.text)
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
+            utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+            synthesizer.speak(utterance)
+        }
         
         
         let second = 5.0
