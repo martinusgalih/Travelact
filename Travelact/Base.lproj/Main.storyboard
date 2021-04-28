@@ -40,6 +40,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
+                                            <action selector="startButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPN-WC-UIG"/>
                                             <segue destination="wVQ-er-54Q" kind="presentation" identifier="twoScreen" modalPresentationStyle="fullScreen" id="hhQ-XO-dqe"/>
                                         </connections>
                                     </button>

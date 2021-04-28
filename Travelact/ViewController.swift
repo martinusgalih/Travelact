@@ -19,6 +19,30 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIPageControl!
     
     
+    @IBAction func startButton(_ sender: Any) {
+        if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
+           
+        } else if bgImage.image == UIImage(named: "Beach") && inputName.text == "" {
+            let alertController = UIAlertController(title: "Warning", message:
+                    "Please input your name", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+        } else if bgImage.image == UIImage(named: "comingsoon") && inputName.text != "" {
+            let alertController = UIAlertController(title: "Warning", message:
+                    "Coming soon", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+        } else if bgImage.image == UIImage(named: "comingsoon") && inputName.text == "" {
+            let alertController = UIAlertController(title: "Warning", message:
+                    "Please input your name and choose the story", preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
+
+                self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
     @IBAction func nextButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "Beach") {
             titleLabel.text = "Coming Soon"
@@ -78,5 +102,12 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         titleLabel.text = "Hive Five Beach"
     }
     
-    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
+            return true
+        }  else {
+             return false
+        }
+        
+    }
 }
