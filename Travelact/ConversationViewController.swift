@@ -16,7 +16,7 @@ class ConversationViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var replySelection: UIView!
     @IBOutlet weak var textLabel: UILabel!
-    
+    let synthesizer = AVSpeechSynthesizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +30,8 @@ class ConversationViewController: UIViewController {
         currentScene = scene1[0]
         setConvos()
     }
+    
+    //voicespeaker
     
     
     func updateUI(){
@@ -52,7 +54,15 @@ class ConversationViewController: UIViewController {
     var currentScene: Convos?
     var currentScenePos = 0
     var wrong = 0
+    var textSpeak:String = ""
     
+    
+//    func progressConvo() {
+//        if currentScenePos == 0 {
+//            textSpeak = currentScene!.text
+//
+//        }
+//    }
     
     //to check if the response is correcr
     func checkResponse(index:Int){
@@ -84,11 +94,17 @@ class ConversationViewController: UIViewController {
         answer2Button.setTitle(currentScene!.respons[1], for: .normal)
         answer3Button.setTitle(currentScene!.respons[2], for: .normal)
         
+    
+        let utterance = AVSpeechUtterance(string: currentScene!.text)
+        utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
+        utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+        synthesizer.speak(utterance)
         let second = 1.0
         DispatchQueue.main.asyncAfter(deadline: .now() + second){
             self.replySelection.isHidden = false
         }
     }
+    
     
     
     

@@ -72,6 +72,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             bgImage.image = UIImage(named: "comingsoon")
             pageControl.currentPage = 2
             self.clickSound()
+            print(AVSpeechSynthesisVoice.speechVoices())
         }
     }
     var destination: [String] = ["Beach","comingsoon","comingsoon"]
