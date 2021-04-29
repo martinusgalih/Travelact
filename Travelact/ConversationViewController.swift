@@ -133,9 +133,9 @@ class ConversationViewController: UIViewController {
         replySelection.isHidden = true
     }
     
-    func replayWrng(){
-        
-    }
+//    func replayWrng(){
+//
+//    }
     
     @IBAction func replayBut(_ sender: Any) {
         setConvos()
