@@ -56,6 +56,14 @@ class ConversationViewController: UIViewController {
 
     @IBAction func exit(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+        let sound = Bundle.main.path(forResource: "Backsound", ofType: "wav")
+        do {
+            audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch {
+            print("Eror")
+        }
+        audioPlayer1.play()
     }
     
     var namaInput: String = ""
