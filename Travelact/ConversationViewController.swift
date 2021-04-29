@@ -37,6 +37,23 @@ class ConversationViewController: UIViewController {
         catch {
             print("Eror")
         }
+        
+        if scene1.count == 23 {
+                    let alertController = UIAlertController(title: "Finish", message:
+                            "The conversation has been ended.", preferredStyle: .alert)
+                        alertController.addAction(UIAlertAction(title: "Ok", style: .default))
+                        self.present(alertController, animated: true, completion: nil)
+                    let sound = Bundle.main.path(forResource: "Backsound", ofType: "wav")
+                    do {
+                        audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                    }
+                    catch {
+                        print("Eror")
+                    }
+                    audioPlayer1.play()
+                    self.dismiss(animated: true, completion: nil)
+                }
+        
         audioPlayer1.play()
         replySelection.layer.shadowColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0).cgColor
         replySelection.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
@@ -144,7 +161,7 @@ class ConversationViewController: UIViewController {
     
         if currentScene!.character == "a"{
             let utterance = AVSpeechUtterance(string: currentScene!.text)
-            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_en-GB_compact")
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Karen-compact")
             utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
             synthesizer.speak(utterance)
             femaleB.image = UIImage(named: "Female-A")
