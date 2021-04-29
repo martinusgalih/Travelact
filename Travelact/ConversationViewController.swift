@@ -111,7 +111,7 @@ class ConversationViewController: UIViewController {
     
         if currentScene!.character == "a"{
             let utterance = AVSpeechUtterance(string: currentScene!.text)
-            utterance.voice = AVSpeechSynthesisVoice(identifier: "")
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Karen-compact")
             utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
             synthesizer.speak(utterance)
 
@@ -131,9 +131,9 @@ class ConversationViewController: UIViewController {
         replySelection.isHidden = true
     }
     
-    func replayWrng(){
-        
-    }
+//    func replayWrng(){
+//
+//    }
     
     @IBAction func replayBut(_ sender: Any) {
         setConvos()
