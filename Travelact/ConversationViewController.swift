@@ -15,6 +15,7 @@ class ConversationViewController: UIViewController {
     @IBOutlet weak var answer2Button: UIButton!
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var replySelection: UIView!
+    @IBOutlet weak var repBut: UIButton!
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var maleC: UIImageView!
     @IBOutlet weak var femaleB: UIImageView!
@@ -60,15 +61,26 @@ class ConversationViewController: UIViewController {
 }
 
     @IBAction func exit(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        let sound = Bundle.main.path(forResource: "Backsound", ofType: "wav")
-        do {
-            audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
-        }
-        catch {
-            print("Eror")
-        }
-        audioPlayer1.play()
+        let refreshAlert = UIAlertController(title: "Exit", message: "Are you sure want to exit?", preferredStyle: UIAlertController.Style.alert)
+
+                refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+                    
+                    let sound = Bundle.main.path(forResource: "Backsound", ofType: "wav")
+                    do {
+                        audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+                    }
+                    catch {
+                        print("Eror")
+                    }
+                    audioPlayer1.play()
+                    self.dismiss(animated: true, completion: nil)
+                }))
+
+                refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (action: UIAlertAction!) in
+                      return
+                }))
+
+                present(refreshAlert, animated: true, completion: nil)
     }
     
     var namaInput: String = ""
@@ -189,7 +201,7 @@ class ConversationViewController: UIViewController {
         }
         
         
-        let second = 1.0
+        let second = 1.6
         DispatchQueue.main.asyncAfter(deadline: .now() + second){
             self.answer1Button.backgroundColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0)
         }
@@ -211,7 +223,7 @@ class ConversationViewController: UIViewController {
             textLabel.isHidden = true
         }
         
-        let second = 1.0
+        let second = 1.6
         DispatchQueue.main.asyncAfter(deadline: .now() + second){
             self.answer2Button.backgroundColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0)
         }
@@ -234,7 +246,7 @@ class ConversationViewController: UIViewController {
             textLabel.isHidden = true
         }
         
-        let second = 1.0
+        let second = 1.6
         DispatchQueue.main.asyncAfter(deadline: .now() + second){
             self.answer3Button.backgroundColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0)
         

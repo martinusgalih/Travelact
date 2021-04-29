@@ -337,6 +337,7 @@
                         <outlet property="femaleB" destination="af9-De-8c5" id="Skl-fX-JS6"/>
                         <outlet property="label" destination="b4e-iy-yFD" id="7zG-lQ-8n1"/>
                         <outlet property="maleC" destination="6AS-k5-11O" id="Q3w-dS-jau"/>
+                        <outlet property="repBut" destination="3Vl-od-4E2" id="NLx-QJ-vtQ"/>
                         <outlet property="replySelection" destination="f75-rz-Qgr" id="66V-ki-LXz"/>
                         <outlet property="textLabel" destination="NXW-Ng-sRJ" id="WSB-Wi-5A0"/>
                     </connections>
