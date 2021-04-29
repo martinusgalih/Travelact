@@ -16,6 +16,10 @@ class ConversationViewController: UIViewController {
     @IBOutlet weak var answer3Button: UIButton!
     @IBOutlet weak var replySelection: UIView!
     @IBOutlet weak var textLabel: UILabel!
+    @IBOutlet weak var maleC: UIImageView!
+    @IBOutlet weak var femaleB: UIImageView!
+    
+    
     let synthesizer = AVSpeechSynthesizer()
     
     override func viewDidLoad() {

@@ -50,7 +50,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="357" id="5Ni-UZ-yM1"/>
                                     <constraint firstItem="HNM-gO-D3V" firstAttribute="leading" secondItem="Ay2-Jq-mML" secondAttribute="leading" constant="90" id="GlG-ul-dhZ"/>
@@ -244,7 +244,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="gH7-uC-3Bg" secondAttribute="trailing" constant="20" id="1Bv-pd-Wqr"/>
                                     <constraint firstItem="D7N-D8-WKk" firstAttribute="top" secondItem="Gqu-8H-3jB" secondAttribute="bottom" constant="20" id="9oH-LN-M3k"/>
@@ -312,6 +312,8 @@
                         <outlet property="answer1Button" destination="gH7-uC-3Bg" id="NG5-jc-xH4"/>
                         <outlet property="answer2Button" destination="Gqu-8H-3jB" id="J0u-fK-Jhc"/>
                         <outlet property="answer3Button" destination="D7N-D8-WKk" id="Na7-BW-NeT"/>
+                        <outlet property="femaleB" destination="af9-De-8c5" id="Skl-fX-JS6"/>
+                        <outlet property="maleC" destination="6AS-k5-11O" id="Q3w-dS-jau"/>
                         <outlet property="replySelection" destination="f75-rz-Qgr" id="66V-ki-LXz"/>
                         <outlet property="textLabel" destination="NXW-Ng-sRJ" id="WSB-Wi-5A0"/>
                     </connections>
