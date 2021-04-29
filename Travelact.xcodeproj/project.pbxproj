@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		90646D18263B205F000BC5A8 /* beachsoundocean.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90646D17263B205F000BC5A8 /* beachsoundocean.wav */; };
+		90646D1A263B2067000BC5A8 /* crowd.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90646D19263B2067000BC5A8 /* crowd.wav */; };
+		90646D1C263B21A1000BC5A8 /* Replay.png in Resources */ = {isa = PBXBuildFile; fileRef = 90646D1B263B21A1000BC5A8 /* Replay.png */; };
 		9066032F263A630900E06FD1 /* Sound1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066032E263A630900E06FD1 /* Sound1.swift */; };
 		90660342263A70E300E06FD1 /* Backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90660341263A70E300E06FD1 /* Backsound.wav */; };
 		90A189AE26372BC90096CB36 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A189AD26372BC90096CB36 /* Sound.swift */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		90646D17263B205F000BC5A8 /* beachsoundocean.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = beachsoundocean.wav; sourceTree = "<group>"; };
+		90646D19263B2067000BC5A8 /* crowd.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = crowd.wav; sourceTree = "<group>"; };
+		90646D1B263B21A1000BC5A8 /* Replay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Replay.png; sourceTree = "<group>"; };
 		9066032E263A630900E06FD1 /* Sound1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound1.swift; sourceTree = "<group>"; };
 		90660341263A70E300E06FD1 /* Backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backsound.wav; sourceTree = "<group>"; };
 		90A189AD26372BC90096CB36 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 			children = (
 				90A189B626372D2A0096CB36 /* clickSound.mp3 */,
 				90660341263A70E300E06FD1 /* Backsound.wav */,
+				90646D17263B205F000BC5A8 /* beachsoundocean.wav */,
+				90646D19263B2067000BC5A8 /* crowd.wav */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -132,6 +140,7 @@
 				F94E872226367E7400F11043 /* ConversationViewController.swift */,
 				F95086B92638FD400032BB29 /* Convos.swift */,
 				90AB6F19263670C100015D35 /* Assets.xcassets */,
+				90646D1B263B21A1000BC5A8 /* Replay.png */,
 				90AB6F1B263670C100015D35 /* LaunchScreen.storyboard */,
 				90AB6F1E263670C100015D35 /* Info.plist */,
 				90AB6F16263670C100015D35 /* Travelact.xcdatamodeld */,
@@ -262,8 +271,11 @@
 			files = (
 				90660342263A70E300E06FD1 /* Backsound.wav in Resources */,
 				90AB6F1D263670C100015D35 /* LaunchScreen.storyboard in Resources */,
+				90646D1C263B21A1000BC5A8 /* Replay.png in Resources */,
 				90AB6F1A263670C100015D35 /* Assets.xcassets in Resources */,
+				90646D18263B205F000BC5A8 /* beachsoundocean.wav in Resources */,
 				90AB6F15263670C100015D35 /* Main.storyboard in Resources */,
+				90646D1A263B2067000BC5A8 /* crowd.wav in Resources */,
 				90A189B726372D2A0096CB36 /* clickSound.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

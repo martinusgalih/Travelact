@@ -40,4 +40,8 @@ extension UIViewController {
     func clickSound() {
     self.playSound(file: "clickSound", fileExtension: "mp3")
     }
+    
+    func beachSound() {
+    self.playSound(file: "beachsoundocean", fileExtension: "wav")
+    }
 }

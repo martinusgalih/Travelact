@@ -295,7 +295,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal">
-                                    <imageReference key="image" image="replay-icon-white-isolated-background-your-web-mobile-app-design-133862786" symbolScale="large"/>
+                                    <imageReference key="image" image="Replay.png" symbolScale="large"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="font">
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                     </preferredSymbolConfiguration>
@@ -349,9 +349,9 @@
     </scenes>
     <resources>
         <image name="Beach" width="1080" height="1920"/>
+        <image name="Replay.png" width="200" height="200"/>
         <image name="chevron.backward" catalog="system" width="96" height="128"/>
         <image name="leftButton" width="266" height="200"/>
-        <image name="replay-icon-white-isolated-background-your-web-mobile-app-design-133862786" width="800" height="800"/>
         <image name="rightButton" width="255" height="200"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

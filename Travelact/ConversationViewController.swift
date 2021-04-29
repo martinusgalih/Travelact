@@ -27,7 +27,17 @@ class ConversationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        beachSound()
+        
+        //play multiple sound
+        let sound = Bundle.main.path(forResource: "crowd", ofType: "wav")
+        do {
+            audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch {
+            print("Eror")
+        }
+        audioPlayer1.play()
         replySelection.layer.shadowColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0).cgColor
         replySelection.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
         replySelection.layer.shadowOpacity = 1.0
@@ -61,6 +71,7 @@ class ConversationViewController: UIViewController {
 }
 
     @IBAction func exit(_ sender: Any) {
+        clickSound1()
         let refreshAlert = UIAlertController(title: "Exit", message: "Are you sure want to exit?", preferredStyle: UIAlertController.Style.alert)
 
                 refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
@@ -95,12 +106,6 @@ class ConversationViewController: UIViewController {
     var textSpeak:String = ""
     
     
-//    func progressConvo() {
-//        if currentScenePos == 0 {
-//            textSpeak = currentScene!.text
-//
-//        }
-//    }
     
     //to check if the response is correcr
     func checkResponse(index:Int){
@@ -182,11 +187,13 @@ class ConversationViewController: UIViewController {
     
     @IBAction func replayBut(_ sender: Any) {
         setConvos()
+        clickSound1()
     }
     
     
     @IBAction func answer1(_ sender: Any) {
         checkResponse(index: 0)
+        clickSound1()
         if currentScene!.correctRespons != 0{
             wrong += 1
             answer1Button.backgroundColor = UIColor.systemRed
@@ -210,6 +217,7 @@ class ConversationViewController: UIViewController {
     
     @IBAction func answer2(_ sender: Any) {
         checkResponse(index: 1)
+        clickSound1()
         if currentScene!.correctRespons != 1{
             wrong += 1
             answer2Button.backgroundColor = UIColor.systemRed
@@ -233,6 +241,7 @@ class ConversationViewController: UIViewController {
     
     @IBAction func answer3(_ sender: Any) {
         checkResponse(index: 2)
+        clickSound1()
         if currentScene!.correctRespons != 2{
             wrong += 1
             answer3Button.backgroundColor = UIColor.systemRed
