@@ -18,7 +18,9 @@ class ConversationViewController: UIViewController {
     @IBOutlet weak var textLabel: UILabel!
     @IBOutlet weak var maleC: UIImageView!
     @IBOutlet weak var femaleB: UIImageView!
+    @IBOutlet var label: UILabel!
     
+    var myString = String()
     
     let synthesizer = AVSpeechSynthesizer()
     
@@ -26,6 +28,7 @@ class ConversationViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        label.text = myString
         
         updateUI()
         replySelection.isHidden = true

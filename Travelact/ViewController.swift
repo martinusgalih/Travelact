@@ -179,6 +179,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         }  else {
              return false
         }
-        
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            var secondController = segue.destination as! ConversationViewController
+            secondController.myString = inputName.text!
+        }
 }
