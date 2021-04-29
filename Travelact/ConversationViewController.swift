@@ -27,6 +27,11 @@ class ConversationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        replySelection.layer.shadowColor = UIColor(red: 17/255, green: 113/255, blue: 227/255, alpha: 1.0).cgColor
+        replySelection.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
+        replySelection.layer.shadowOpacity = 1.0
+        replySelection.layer.shadowRadius = 0.1
+        
         // Do any additional setup after loading the view.
         label.text = myString
         
