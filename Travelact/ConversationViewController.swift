@@ -105,12 +105,18 @@ class ConversationViewController: UIViewController {
         answer3Button.setTitle(currentScene!.respons[2], for: .normal)
         
     
-        if currentScene!.character == "a"{
-            let utterance = AVSpeechUtterance(string: currentScene!.text)
-            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Karen-compact")
-            utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
-            synthesizer.speak(utterance)
+//        if currentScene!.character == "a"{
+//            let utterance = AVSpeechUtterance(string: currentScene!.text)
+//            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Karen-compact")
+//            utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+//            synthesizer.speak(utterance)
             
+            if currentScene!.character == "a"{
+                let utterance = AVSpeechUtterance(string: currentScene!.text)
+                utterance.voice = AVSpeechSynthesisVoice(identifier: "https://ttsmp3.com/text-to-speech/British%20English/")
+                utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
+                synthesizer.speak(utterance)
+//
         } else if currentScene!.character == "c"{
             let utterance = AVSpeechUtterance(string: currentScene!.text)
             utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
