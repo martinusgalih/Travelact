@@ -25,9 +25,28 @@ extension UIViewController {
             print("something went wrong")
         }
     }
+    
+    func stopSound(file: String, fileExtension: String, isLoop: Bool = false){
+        soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
+        do {
+            guard let uri = soundURI else {return}
+            audioPlayer = try AVAudioPlayer(contentsOf: uri)
+            audioPlayer.stop()
+        } catch {
+            print("something went wrong")
+        }
+    }
 
     func clickSound() {
     self.playSound(file: "clickSound", fileExtension: "mp3")
+    }
+    
+    func bgSound() {
+    self.playSound(file: "Backsound", fileExtension: "wav")
+    }
+    
+    func bgSoundStop() {
+        self.stopSound(file: "Backsound", fileExtension: "wav")
     }
 //    func playBgSound(){
 //        bgSoundURI = URL(fileURLWithPath: Bundle.main.path(forResource: "PLAYFUL", ofType: "mp3")!)

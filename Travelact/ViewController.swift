@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         pageControl.numberOfPages = 2
         UISetup()
-        
+        bgSound()
         do {
             try audioSession.setActive(true)
             volume = audioSession.outputVolume
@@ -138,6 +138,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
+            bgSoundStop()
             return true
         }  else {
              return false
