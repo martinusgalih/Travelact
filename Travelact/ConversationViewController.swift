@@ -117,12 +117,16 @@ class ConversationViewController: UIViewController {
             utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_en-GB_compact")
             utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
             synthesizer.speak(utterance)
+            femaleB.image = UIImage(named: "Female-A")
+            maleC.image = UIImage(named: "")
 
         } else if currentScene!.character == "c"{
             let utterance = AVSpeechUtterance(string: currentScene!.text)
             utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.Daniel-compact")
             utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
             synthesizer.speak(utterance)
+            maleC.image = UIImage(named: "Male-C")
+            femaleB.image = UIImage(named: "")
         }
         
         
