@@ -34,6 +34,8 @@ class ConversationViewController: UIViewController {
         replySelection.isHidden = true
         //textLabel.isHidden = true
         
+        scene1 = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1, character: "a"), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1, character: "a"), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is \(namaInput)", "What's your name?", "Huh?"], correctRespons: 0, character: "a"), Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1, character: "c"), Convos(text: "I would like to have water, what about you? Would you like some?", respons: ["yes please", "I’ll follow you" , "no, thank you"], correctRespons: 1, character: "a")]
+        
         currentScene = scene1[0]
         setConvos()
     }
@@ -54,9 +56,9 @@ class ConversationViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    var namaInput: String = ""
     //nanti nambah
-    var scene1:[Convos] = [Convos(text: "Excuse me, would you mind if i seat here?", respons: ["Sorry?", "Sure", "Should you?"], correctRespons: 1, character: "a"), Convos(text: "Thank you, how nice you are. This place is sure crowded isn’t it?", respons: ["Sorry?", "Yes, it's very crowded here", "You think so?, i dont think so"], correctRespons: 1, character: "a"), Convos(text: "By the way, my name is Amy, can I know what’s your name?", respons: ["My name is", "What's your name?", "Huh?"], correctRespons: 0, character: "a"), Convos(text: "Excuse me, are you ready to order?", respons: ["Oh, I can order", "Hm, I'd like to have fish and chips, please", "Yes, order mine please"], correctRespons: 1, character: "c"), Convos(text: "I would like to have water, what about you? Would you like some?", respons: ["yes please", "I’ll follow you" , "no, thank you"], correctRespons: 1, character: "a")]
+    var scene1:[Convos] = []
     
     
     
@@ -111,7 +113,7 @@ class ConversationViewController: UIViewController {
     
         if currentScene!.character == "a"{
             let utterance = AVSpeechUtterance(string: currentScene!.text)
-            utterance.voice = AVSpeechSynthesisVoice(identifier: "")
+            utterance.voice = AVSpeechSynthesisVoice(identifier: "com.apple.ttsbundle.siri_female_en-GB_compact")
             utterance.rate = AVSpeechUtteranceMaximumSpeechRate / 2.0
             synthesizer.speak(utterance)
 

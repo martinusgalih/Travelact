@@ -184,6 +184,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             let secondController = segue.destination as! ConversationViewController
-            secondController.myString = inputName.text!
+            secondController.namaInput = inputName.text ?? ""
+        
         }
 }
