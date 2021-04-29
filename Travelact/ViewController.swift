@@ -173,15 +173,17 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
-            
+            audioPlayer1.stop()
             return true
     
         }  else {
              return false
         }
     }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            var secondController = segue.destination as! ConversationViewController
+            let secondController = segue.destination as! ConversationViewController
             secondController.myString = inputName.text!
         }
 }
