@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		90660329263A5A3C00E06FD1 /* Backsound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 90660328263A5A3C00E06FD1 /* Backsound.wav */; };
+		9066032F263A630900E06FD1 /* Sound1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066032E263A630900E06FD1 /* Sound1.swift */; };
 		90A189AE26372BC90096CB36 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A189AD26372BC90096CB36 /* Sound.swift */; };
 		90A189B726372D2A0096CB36 /* clickSound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 90A189B626372D2A0096CB36 /* clickSound.mp3 */; };
 		90AB6F0E263670C100015D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90AB6F0D263670C100015D35 /* AppDelegate.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		90660328263A5A3C00E06FD1 /* Backsound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Backsound.wav; sourceTree = "<group>"; };
+		9066032E263A630900E06FD1 /* Sound1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound1.swift; sourceTree = "<group>"; };
 		90A189AD26372BC90096CB36 /* Sound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
 		90A189B626372D2A0096CB36 /* clickSound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = clickSound.mp3; sourceTree = "<group>"; };
 		90AB6F0A263670C100015D35 /* Travelact.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Travelact.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,6 +127,7 @@
 				90AB6F0F263670C100015D35 /* SceneDelegate.swift */,
 				90AB6F11263670C100015D35 /* ViewController.swift */,
 				90A189AD26372BC90096CB36 /* Sound.swift */,
+				9066032E263A630900E06FD1 /* Sound1.swift */,
 				90AB6F13263670C100015D35 /* Main.storyboard */,
 				F94E872226367E7400F11043 /* ConversationViewController.swift */,
 				F95086B92638FD400032BB29 /* Convos.swift */,
@@ -287,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90AB6F18263670C100015D35 /* Travelact.xcdatamodeld in Sources */,
+				9066032F263A630900E06FD1 /* Sound1.swift in Sources */,
 				90AB6F12263670C100015D35 /* ViewController.swift in Sources */,
 				F94E872326367E7400F11043 /* ConversationViewController.swift in Sources */,
 				90AB6F0E263670C100015D35 /* AppDelegate.swift in Sources */,

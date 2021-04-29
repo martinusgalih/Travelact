@@ -17,6 +17,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var locLabel: UILabel!
     @IBAction func startButton(_ sender: Any) {
+       
+        //logika next
         if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
            
         } else if bgImage.image == UIImage(named: "Beach") && inputName.text == "" {
@@ -40,6 +42,8 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         }
     }
     
+    
+    //nextButton
     @IBAction func nextButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "Beach") {
             titleLabel.text = "Coming Soon"
@@ -56,6 +60,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         }
     }
     
+    //backButton
     @IBAction func backButton(_ sender: Any) {
         if bgImage.image == UIImage(named: "comingsoon") {
             titleLabel.text = "Hive Beach Cafe"
@@ -72,6 +77,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
             print(AVSpeechSynthesisVoice.speechVoices())
         }
     }
+    //pageviewcontroller
     var destination: [String] = ["Beach","comingsoon","comingsoon"]
     var frame = CGRect.zero
     
@@ -86,7 +92,18 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
         
         pageControl.numberOfPages = 2
         UISetup()
-        bgSound()
+        
+        //play multiple sound
+        let sound = Bundle.main.path(forResource: "Backsound", ofType: "wav")
+        do {
+            audioPlayer1 = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound!))
+        }
+        catch {
+            print("Eror")
+        }
+        audioPlayer1.play()
+        
+        
         
         inputName.delegate = self
         
@@ -156,7 +173,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, UITextFieldDelegat
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if bgImage.image == UIImage(named: "Beach") && inputName.text != "" {
-            bgSoundStop()
+            
             return true
     
         }  else {

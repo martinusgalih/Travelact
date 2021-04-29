@@ -12,9 +12,9 @@ var soundURI: URL?
 var audioPlayer = AVAudioPlayer()
 var bgSoundURI: URL?
 var bgAudioPlayer = AVAudioPlayer()
+var audioPlayer1 = AVAudioPlayer()
 
 extension UIViewController {
-    
     func playSound(file: String, fileExtension: String, isLoop: Bool = false){
         soundURI = URL(fileURLWithPath: Bundle.main.path(forResource: file, ofType: fileExtension)!)
         do {
@@ -40,23 +40,4 @@ extension UIViewController {
     func clickSound() {
     self.playSound(file: "clickSound", fileExtension: "mp3")
     }
-    
-    func bgSound() {
-    self.playSound(file: "Backsound", fileExtension: "wav")
-    }
-    
-    func bgSoundStop() {
-        self.stopSound(file: "Backsound", fileExtension: "wav")
-    }
-//    func playBgSound(){
-//        bgSoundURI = URL(fileURLWithPath: Bundle.main.path(forResource: "PLAYFUL", ofType: "mp3")!)
-//        do {
-//            guard let uri = bgSoundURI else {return}
-//            bgAudioPlayer = try AVAudioPlayer(contentsOf: uri)
-//            bgAudioPlayer.numberOfLoops = -1
-//            bgAudioPlayer.play()
-//        } catch {
-//            print("something went wrong")
-//        }
-//    }
 }
